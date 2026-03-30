@@ -20,6 +20,9 @@ struct ContentView: View {
             
             List(friends) { friend in
                 HStack {
+                    if friend.isBirthdayToday {
+                        Image(systemName: "birthday.cake")
+                    }
                     Text(friend.name)
                     Spacer()
                     Text(friend.birthday, format: .dateTime.month(.wide).day().year())

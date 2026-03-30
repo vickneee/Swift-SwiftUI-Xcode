@@ -19,6 +19,6 @@ class Friend {
     }
     
     var isBirthdayToday: Bool {
-        Calendar.current.isDate(Date(), inSameDayAs: birthday)
+        Calendar.current.isDateInToday(birthday)
     }
 }
